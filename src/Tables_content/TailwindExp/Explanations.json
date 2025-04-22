@@ -1,0 +1,186 @@
+{
+  "terms": {
+    "id1": {
+      "name": "p-{n}",
+      "explanation": "Padding en todos los lados",
+      "term_definition": "El padding es el espacio interno entre el contenido y el borde de un elemento. Es como el relleno de un cojín."
+    },
+    "id2": {
+      "name": "pt-{n}",
+      "explanation": "Padding en la parte superior"
+    },
+    "id3": {
+      "name": "px-{n}",
+      "explanation": "Padding horizontal (izquierda y derecha)"
+    },
+    "id4": {
+      "name": "py-{n}",
+      "explanation": "Padding vertical (arriba y abajo)"
+    },
+    "id5": {
+      "name": "m-{n}",
+      "explanation": "Margin en todos los lados",
+      "term_definition": "El margin es el espacio externo entre un elemento y los que lo rodean. Es como el espacio entre muebles en una habitación."
+    },
+    "id6": {
+      "name": "mt-{n}",
+      "explanation": "Margin en la parte superior"
+    },
+    "id7": {
+      "name": "text-{color}",
+      "explanation": "Color del texto",
+      "term_definition": "El color en Tailwind se define con palabras clave como 'red-500', que representan tonos predefinidos de una paleta."
+    },
+    "id8": {
+      "name": "bg-{color}",
+      "explanation": "Color de fondo"
+    },
+    "id9": {
+      "name": "hover:",
+      "explanation": "Efecto cuando el cursor pasa por encima",
+      "term_definition": "El hover es un modificador que aplica estilos cuando el cursor pasa por encima de un elemento."
+    },
+    "id10": {
+      "name": "flex",
+      "explanation": "Convierte un contenedor en un contenedor flex",
+      "term_definition": "Flexbox es un sistema de diseño que permite organizar elementos en fila o columna, con control sobre alineación y distribución."
+    },
+    "id11": {
+      "name": "items-center",
+      "explanation": "Alinea elementos al centro verticalmente"
+    },
+    "id12": {
+      "name": "justify-between",
+      "explanation": "Distribuye los elementos con espacio entre ellos horizontalmente"
+    },
+    "id13": {
+      "name": "w-{n}",
+      "explanation": "Ancho del elemento",
+      "term_definition": "El ancho (width) define qué tan ancho es un elemento, usando valores como 'w-10', 'w-full', etc."
+    },
+    "id14": {
+      "name": "h-{n}",
+      "explanation": "Alto del elemento",
+      "term_definition": "El alto (height) define la altura de un elemento."
+    },
+    "id15": {
+      "name": "rounded-{n}",
+      "explanation": "Bordes redondeados",
+      "term_definition": "Los bordes redondeados suavizan las esquinas de un elemento, usando valores como 'rounded', 'rounded-md', 'rounded-full', etc."
+    },
+    "id16": {
+      "name": "shadow-{n}",
+      "explanation": "Sombra del elemento",
+      "term_definition": "Las sombras (shadows) agregan profundidad visual, simulando una elevación sobre la superficie."
+    },
+    "id17": {
+      "name": "border",
+      "explanation": "Añade un borde de 1px sólido",
+      "term_definition": "Un borde (border) rodea un elemento y puede tener diferentes grosores, colores y estilos."
+    },
+    "id18": {
+      "name": "border-{color}",
+      "explanation": "Color del borde"
+    },
+    "id19": {
+      "name": "grid",
+      "explanation": "Convierte un contenedor en un grid",
+      "term_definition": "El grid es un sistema de diseño bidimensional para organizar contenido en filas y columnas."
+    },
+    "id20": {
+      "name": "col-span-{n}",
+      "explanation": "Cuántas columnas ocupa un elemento"
+    },
+    "id21": {
+      "name": "gap-{n}",
+      "explanation": "Espacio entre elementos hijos en un contenedor grid o flex",
+      "term_definition": "El gap define el espacio entre filas y/o columnas en un contenedor grid o flex."
+    },
+    "id22": {
+      "name": "space-x-{n}",
+      "explanation": "Espacio horizontal entre hijos directos"
+    },
+    "id23": {
+      "name": "space-y-{n}",
+      "explanation": "Espacio vertical entre hijos directos"
+    },
+    "id24": {
+      "name": "text-xl",
+      "explanation": "Tamaño del texto grande",
+      "term_definition": "El tamaño de texto se define con clases como 'text-sm', 'text-lg', 'text-2xl', etc., que representan diferentes escalas tipográficas."
+    },
+    "id25": {
+      "name": "font-bold",
+      "explanation": "Texto en negrita",
+      "term_definition": "El peso de fuente (font-weight) se refiere a qué tan gruesa o delgada se ve una tipografía."
+    },
+    "id26": {
+      "name": "font-light",
+      "explanation": "Texto con fuente más delgada"
+    },
+    "id27": {
+      "name": "uppercase",
+      "explanation": "Convierte el texto a mayúsculas",
+      "term_definition": "Transformaciones de texto permiten modificar la apariencia del contenido textual, como mayúsculas, minúsculas o capitalización."
+    },
+    "id28": {
+      "name": "lowercase",
+      "explanation": "Convierte el texto a minúsculas"
+    },
+    "id29": {
+      "name": "capitalize",
+      "explanation": "Primera letra de cada palabra en mayúscula"
+    },
+    "id30": {
+      "name": "tracking-wide",
+      "explanation": "Aumenta el espaciado entre letras",
+      "term_definition": "El tracking modifica el espacio horizontal entre los caracteres de un texto."
+    },
+    "id31": {
+      "name": "leading-tight",
+      "explanation": "Espacio reducido entre líneas de texto",
+      "term_definition": "El leading es el espacio vertical entre líneas de texto (interlineado)."
+    },
+    "id32": {
+      "name": "overflow-hidden",
+      "explanation": "Oculta el contenido que se desborda",
+      "term_definition": "El overflow controla qué hacer cuando el contenido excede el tamaño del contenedor: ocultarlo, mostrar scroll, etc."
+    },
+    "id33": {
+      "name": "overflow-scroll",
+      "explanation": "Muestra scroll cuando el contenido se desborda"
+    },
+    "id34": {
+      "name": "truncate",
+      "explanation": "Corta el texto con puntos suspensivos si es muy largo",
+      "term_definition": "El truncado se usa para evitar que el texto ocupe más espacio del deseado, mostrando '...' al final."
+    },
+    "id35": {
+      "name": "z-{n}",
+      "explanation": "Nivel de profundidad de un elemento (z-index)",
+      "term_definition": "El z-index controla el orden de apilamiento de los elementos: cuál se ve delante o detrás."
+    },
+    "id36": {
+      "name": "absolute",
+      "explanation": "Posiciona el elemento de forma absoluta dentro del contenedor más cercano con posición relativa",
+      "term_definition": "La propiedad position controla cómo se posicionan los elementos en la página. 'absolute' los saca del flujo normal."
+    },
+    "id37": {
+      "name": "relative",
+      "explanation": "Establece un contexto para posicionamiento absoluto de elementos hijos"
+    },
+    "id38": {
+      "name": "top-{n}",
+      "explanation": "Distancia desde la parte superior del contenedor"
+    },
+    "id39": {
+      "name": "left-{n}",
+      "explanation": "Distancia desde el borde izquierdo del contenedor"
+    },
+    "id40": {
+      "name": "hidden",
+      "explanation": "Oculta completamente el elemento",
+      "term_definition": "La clase 'hidden' en Tailwind aplica `display: none`, haciendo que el elemento no aparezca ni ocupe espacio."
+    }
+  }
+}
