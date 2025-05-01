@@ -1,0 +1,58 @@
+import { Link } from "react-router-dom";
+
+const Python = () => {
+    return (
+        <div className="flex flex-col">
+            <h1 className="text-4xl font-bold p-4">Python</h1>
+            <div id="TextoPrincipal" className="flex flex-col md:flex-row justify-center gap-4 p-4">
+                <div className="bg-gray-800 p-6 rounded-lg flex flex-col gap-4 md:w-8/10 order-2 md:order-1">
+                    <h2 className="text-center text-bold text-xl">¿Qué es Python?</h2>
+                    <p className="text-white text-justify">Python es un lenguaje de programación interpretado de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. Su sintaxis clara y su enfoque en la legibilidad del código lo hacen ideal para principiantes y expertos en programación.</p>
+                    <p className="text-white text-justify">Aquí podrás encontrar distintos niveles de aprendizaje para Python. <em className="font-bold">¡Espero que te sean de ayuda!</em></p>
+                    <div id="historia" className="flex flex-col gap-4">
+                        <p className="text-white text-justify"><strong className="font-bold text-xl bg-green-900 p-2 rounded-md">Historia de Python:</strong><br/>
+                        <br/>
+                        Este lenguaje es uno de los más populares y versátiles del mundo. Creado por Guido van Rossum en 1989.
+                        <br/><br/>
+                        Aunque es considerado muchas veces como un lenguaje "scripting", en realidad es un lenguaje de propósito general. Actualmente
+                        es usado en muchas áreas como: <em className="font-bold">Desarrollo web, Inteligencia Artificial, Ciencia de datos, etc.</em> 
+                        Incluso en grandes servidores web que proveen servicio ininterrumpido los 365 días del año.
+                        <br/><br/>
+                        Guido van Rossum es un programador holandés que trabajaba en el CWI (Centrum Wiskunde & Informatica) cuando comenzó a desarrollar Python.
+                        A finales de la década de los 80 (1989), Guido Van Rossum decidió crear un nuevo lenguaje de programación por necesidad personal,
+                        buscando así tener un lenguaje que fuera fácil de leer, escribir y soportar. Quería hacerlo de forma que los programas fueran
+                        fáciles de leer y escribir, o mejor dicho, con una sintáxis simple y limpia.
+                        <br/><br/>
+                        Recibió influencia de muchos otros lenguajes, como ABC, Modula-3 y C++ entre otros.
+                        </p>
+                    </div>
+                    <div id="usos" className="flex flex-col gap-4">
+                        <p className="text-white text-justify"><strong className="font-bold text-xl bg-green-900 p-2 rounded-md">Usos de Python:</strong><br/>
+                        <br/>
+                        Algunos de los usos más comunes de Python incluyen:
+                        <ul className="list-disc pl-8 space-y-1">
+                            <li>Desarrollo web</li>
+                            <li>Inteligencia Artificial</li>
+                            <li>Ciencia de datos</li>
+                            <li>Automatización de tareas</li>
+                            <li>Aplicaciones móviles</li>
+                            <li>Aplicaciones de escritorio</li>
+                            <li>Aplicaciones de servidor</li>
+                            <li>Aplicaciones de red</li>
+                            <li>Y muchas más...</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div id="TablaDeContenido" className="flex flex-col gap-4 p-4 rounded-lg shadow-lg bg-white md:w-2/10 order-1 md:order-2">
+                    <h2 className="text-center text-bold text-xl bg-blue-600 p-2 rounded-md">Aprendizaje Progresivo</h2>
+                    <div className="flex flex-col gap-4">
+                            <Link to="fundamentos" className="bg-black text-white px-4 py-2 rounded-md inline-block whitespace-nowrap">1. Fundamentos</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Python;
