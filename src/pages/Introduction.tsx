@@ -8,7 +8,7 @@ const Introduction = () => {
     };
 
 
-    const blockStyle = "flex flex-col gap-2 border-2 rounded-xl p-4 cursor-pointer hover:border-gray-500 hover:bg-gray-700 transition-all w-48 animation-card";
+    const blockStyle = "flex-auto gap-2 border-2 rounded-xl p-4 cursor-pointer hover:border-gray-500 hover:bg-gray-700 transition-all w-48 animation-card";
     
     const renderContent = () => {
         switch(activeCard) {
@@ -40,11 +40,15 @@ const Introduction = () => {
                         <p>Los lenguajes de programación son lenguajes que se utilizan para crear programas y aplicaciones.</p>
                         <p>Existen muchos lenguajes de programación, cada uno con sus propias características y ventajas.</p>
                         <p>Algunos lenguajes de programación son:</p>
-                        <ul className="list-disc ml-8 -mt-1 space-y-0.5 justify-items-start">
+                        <ul className="list-disc ml-8 m-2 space-y-1 justify-items-start">
                             <li>JavaScript</li>
                             <li>Python</li>
                             <li>Java</li>
                             <li>C++</li>
+                            <li>C#</li>
+                            <li>Kotlin</li>
+                            <li>TypeScript</li>
+                            <li>Muchos más...</li>
                         </ul>
                         <p>Cada lenguaje tiene sus propias características y ventajas, y se utiliza para diferentes propósitos.</p>
                         <p>Por ejemplo, JavaScript se utiliza para crear aplicaciones web interactivas y Python se utiliza para crear aplicaciones de análisis de datos.</p>
@@ -92,7 +96,7 @@ const Introduction = () => {
     return (
         <div className="flex flex-col gap-4 p-4">
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
-                <h2 className="text-center font-bold text-2xl p-4">Introducción</h2>
+                <h2 className="text-center font-bold text-2xl p-4">Introducción a la programación</h2>
                 <div className="hidden md:block self-stretch border-r border-gray-300"></div>
                 <div className="block md:hidden w-full border-b border-gray-300"></div>
                 <div className="flex flex-col gap-2">
@@ -100,63 +104,47 @@ const Introduction = () => {
                     <p className="flex flex-col px-8 text-justify"><em>¡Espero que te sean de ayuda!</em></p>
                 </div>
             </div>
-            
             {activeCard === null ? (
-                // Layout cuando no hay tarjeta activa (vista inicial)
-                /* 
-                  Contenedor principal de las tarjetas con scroll horizontal:
-                  - overflow-x-auto: Permite scroll horizontal
-                  - snap-x snap-mandatory: Habilita puntos de anclaje para un scroll suave
-                  - touch-pan-x: Mejora la experiencia táctil en dispositivos móviles
-                  - w-full: Ocupa todo el ancho disponible
-                  - no-scrollbar: Oculta la barra de scroll pero mantiene la funcionalidad
-                
-                  Contenedor interno:
-                  - min-w-max: Asegura que todas las tarjetas sean visibles sin cortarse
-                  - px-4: Añade padding horizontal para evitar que las tarjetas toquen los bordes
-                  
-                  Tarjetas individuales:
-                  - snap-center: Centra cada tarjeta al hacer scroll
-                */
-                <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory touch-pan-x w-full no-scrollbar">
-                    <div className="flex gap-4 min-w-max px-4">
+                // Layout cuando no hay una tarjeta activa
+                <div className="flex gap-4 pt-4">
+                    <div className="flex flex-wrap gap-4 px-4">
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('programming')}
                             title="Haz click para conocer más"
                         >
                             <h3 className="text-lg font-bold">¿Qué es la programación?</h3>
                         </div>
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('purpose')}
                             title="Haz click para conocer más"
                         >
                             <h3 className="text-lg font-bold">¿Para qué sirve programar?</h3>
                         </div>
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('languages')}
                             title="Haz click para conocer más"
                         >
                             <h3 className="text-lg font-bold">¿Cuáles son los lenguajes de programación?</h3>
                         </div>
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('algorithm')}
                             title="Haz click para conocer más"
                         >
                             <h3 className="text-lg font-bold">¿Qué es un algoritmo?</h3>
                         </div>
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('program')}
                             title="Haz click para conocer más"
                         >
                             <h3 className="text-lg font-bold">¿Qué es un programa?</h3>
                         </div>
                         <div 
-                            className={`${blockStyle} snap-center`}
+                            className={`${blockStyle}`}
                             onClick={() => toggleCard('difference')}
                             title="Haz click para conocer más"
                         >
@@ -166,52 +154,50 @@ const Introduction = () => {
                 </div>
             ) : (
                 // Layout cuando hay una tarjeta activa
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     {/* Sidebar con las tarjetas */}
-                    <div className="w-full md:w-auto overflow-x-auto snap-x snap-mandatory touch-pan-x no-scrollbar">
-                        <div className="flex gap-4 min-w-max px-4">
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'programming' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('programming')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Qué es la programación?</h3>
-                            </div>
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'purpose' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('purpose')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Para qué sirve programar?</h3>
-                            </div>
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'languages' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('languages')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Cuáles son los lenguajes de programación?</h3>
-                            </div>
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'algorithm' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('algorithm')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Qué es un algoritmo?</h3>
-                            </div>
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'program' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('program')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Qué es un programa?</h3>
-                            </div>
-                            <div 
-                                className={`${blockStyle} snap-center ${activeCard === 'difference' ? 'border-black border-4' : ''}`}
-                                onClick={() => toggleCard('difference')}
-                                title="Haz click para conocer más"
-                            >
-                                <h3 className="text-lg font-bold">¿Son lo mismo los algoritmos y los programas?</h3>
-                            </div>
+                    <div className="flex flex-row lg:flex-col gap-4 overflow-x-auto snap-x lg:snap-none snap-mandatory">
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'programming' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('programming')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Qué es la programación?</h3>
+                        </div>
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'purpose' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('purpose')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Para qué sirve programar?</h3>
+                        </div>
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'languages' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('languages')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Cuáles son los lenguajes de programación?</h3>
+                        </div>
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'algorithm' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('algorithm')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Qué es un algoritmo?</h3>
+                        </div>
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'program' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('program')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Qué es un programa?</h3>
+                        </div>
+                        <div 
+                            className={`${blockStyle} ${activeCard === 'difference' ? 'border-black border-4' : ''}`}
+                            onClick={() => toggleCard('difference')}
+                            title="Haz click para conocer más"
+                        >
+                            <h3 className="text-lg font-bold">¿Son lo mismo los algoritmos y los programas?</h3>
                         </div>
                     </div>
                     
