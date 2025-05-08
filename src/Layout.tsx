@@ -39,10 +39,10 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="layout min-h-screen flex flex-col">
-      <div id="header" className="header flex p-4 justify-between items-center border-b-2 border-white sticky top-0 z-10 w-full" style={{ backgroundColor: '#0086bb' }}>
+      <div id="header" className="header flex p-4 justify-between items-center border-b-2 border-white sticky top-0 z-10 w-full" style={{ backgroundColor: '#086D57' }}>
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo de Gakodvlpr" height={50} width={50} className="rounded-full py-2"/>
-          <h1 className="text-4xl font-bold font-mono">Gakodvlpr</h1>
+          <h1 className="text-4xl font-bold font-mono">Gakodevlpr</h1>
         </div>
         <div id="menu-icon" className="flex justify-center items-center gap-4">
           {(navbar || isClosing) && (

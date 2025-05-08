@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import icono_pruebas from '../images/icons/icono_pruebas.png';
+import { Link } from 'react-router-dom';
 
 const Introduction = () => {
     const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -7,6 +9,7 @@ const Introduction = () => {
         setActiveCard(activeCard === cardId ? null : cardId);
     };
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const blockStyle = "flex-auto gap-2 border-2 rounded-xl p-4 cursor-pointer hover:border-gray-500 hover:bg-gray-700 transition-all w-48 animation-card";
     
@@ -106,7 +109,7 @@ const Introduction = () => {
             </div>
             {activeCard === null ? (
                 // Layout cuando no hay una tarjeta activa
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-col gap-4 pt-4">
                     <div className="flex flex-wrap gap-4 px-4">
                         <div 
                             className={`${blockStyle}`}
@@ -150,6 +153,9 @@ const Introduction = () => {
                         >
                             <h3 className="text-lg font-bold">¿Son lo mismo los algoritmos y los programas?</h3>
                         </div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <p className="text-end">En este menú podrás encontrar distintas secciones más detalladas sobre programación.</p>
                     </div>
                 </div>
             ) : (
@@ -205,6 +211,14 @@ const Introduction = () => {
                     <div className="flex-1">
                         {renderContent()}
                     </div>
+                </div>
+            )}
+            <div className='flex justify-end fixed bottom-16 right-6 z-50'>
+                <button className="bg-black text-white p-2 rounded-md" onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={icono_pruebas} alt="icono_pruebas" className='w-6 h-6'/></button>
+            </div>
+            {isMenuOpen && (
+                <div className="fixed bottom-28 right-8 bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col gap-2">
+                    <Link to="/python" className="bg-black text-white p-2 rounded-md">Python</Link>
                 </div>
             )}
         </div>

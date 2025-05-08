@@ -20,7 +20,9 @@ const Homepage = () => {
             <div className="flex flex-col">
                 <h2 id="about-me" className="text-center font-bold text-2xl py-4">Redes sociales</h2>
                 <div className="flex flex-col gap-4">
-                    <a href="https://github.com/gakodevlpr" target="_blank" rel="noopener noreferrer">Red social de GitHub</a>
+                    {/* Faltaría añadir más estilos para que se vean mejor */}
+                    <a href="https://github.com/gakodevlpr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/gabriel-cerezuela-mazar%C3%ADo-196759223/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
             <div className="flex flex-col">
