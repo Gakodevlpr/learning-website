@@ -4,11 +4,11 @@ const Titles = ({title, text}:{title:string, text:string}) => {
             <h2 className="text-center font-bold text-2xl">{title}</h2>
             <span className="hidden md:block h-16 border-r border-gray-300"></span>
             <span className="block md:hidden w-full border-b border-gray-300"></span>
-            <p className="text-justify">
-                {text}
-                <br /><br />
+            <div className="text-justify">
+                <p dangerouslySetInnerHTML={{ __html: text }}></p>
+                <br />
                 <em className="font-bold text-lg">¡Espero que te sean de ayuda!</em>
-            </p>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import icono_pruebas from '../images/icons/icono_pruebas.png';
 import { Link } from 'react-router-dom';
 
 const Introduction = () => {

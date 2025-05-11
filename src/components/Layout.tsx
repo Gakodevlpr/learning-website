@@ -2,8 +2,8 @@ import { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../../logo/logogako.png';
-import SearchBar from './SearchBar';
 import ThemeToggle from './ThemeToggle';
+import CookieConsent from './CookieConsent';
 
 interface LayoutProps {
   children: ReactNode;
@@ -113,6 +113,7 @@ const Layout = ({ children }: LayoutProps) => {
       <footer className="footer flex justify-center items-center border-2 border-gray-300 p-auto font-mono">
         <p>© 2025 Gakodvlpr</p>
       </footer>
+      <CookieConsent />
     </div> 
   );
 };
