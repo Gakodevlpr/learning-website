@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import logo from '../logo/logogako.png';
+import logo from '../../logo/logogako.png';
+import SearchBar from './SearchBar';
+import ThemeToggle from './ThemeToggle';
 
 interface LayoutProps {
   children: ReactNode;
@@ -42,15 +44,17 @@ const Layout = ({ children }: LayoutProps) => {
       <div id="header" className="header flex p-4 justify-between items-center border-b-2 border-white sticky top-0 z-10 w-full" style={{ backgroundColor: '#086D57' }}>
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo de Gakodvlpr" height={50} width={50} className="rounded-full py-2"/>
-          <h1 className="text-4xl font-bold font-mono">Gakodevlpr</h1>
+          <Link to='/' className="text-3xl font-bold font-mono">Gakodevlpr</Link>
         </div>
+        {/*Trabajando en una barra de búsqueda -> <SearchBar /> este es el elemento que deberé colocar*/}
         <div id="menu-icon" className="flex justify-center items-center gap-4">
+          <ThemeToggle/>
           {(navbar || isClosing) && (
             <nav className={`absolute py-4 top-full right-0 flex flex-col justify-center gap-2 transition-all duration-300 ${isClosing ? 'opacity-0 -translate-x-full' : 'opacity-100 translate-x-0'}`}>
               <Link 
                 to="/" 
                 onClick={closeNavbar}
-                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/') ? 'font-bold text-black border-l-4 border-l-black' : null}`}
+                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/') ? 'font-bold text-black border-l-4 border-l-cyan-500' : null}`}
                 aria-current={isActive('/') ? 'page' : undefined}
               >
                 Inicio
@@ -58,31 +62,31 @@ const Layout = ({ children }: LayoutProps) => {
               <Link 
                 to="/introduction" 
                 onClick={closeNavbar}
-                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/introduction') ? 'font-bold text-black border-l-4 border-l-black' : null}`}
+                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/introduction') ? 'font-bold text-black border-l-4 border-l-cyan-500' : null}`}
                 aria-current={isActive('/introduction') ? 'page' : undefined}
               >
                 Introducción
               </Link>
+              <Link
+                to="/python"
+                onClick={closeNavbar}
+                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/python') ? 'font-bold text-black border-l-4 border-l-cyan-500' : null}`}
+                aria-current={isActive('/python') ? 'page' : undefined}
+              >
+                Python
+              </Link>
               <Link 
                 to="/js" 
                 onClick={closeNavbar}
-                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/js') ? 'font-bold text-black border-l-4 border-l-black' : null}`}
+                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/js') ? 'font-bold text-black border-l-4 border-l-cyan-500' : null}`}
                 aria-current={isActive('/js') ? 'page' : undefined}
               >
                 JavaScript
               </Link>
               <Link
-                to="/python"
-                onClick={closeNavbar}
-                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/python') ? 'font-bold text-black border-l-4 border-l-black' : null}`}
-                aria-current={isActive('/python') ? 'page' : undefined}
-              >
-                Python
-              </Link>
-              <Link
                 to="/apis"
                 onClick={closeNavbar}
-                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/apis') ? 'font-bold text-black border-l-4 border-l-black' : null}`}
+                className={`${transitionSpecial} animation-navbar border-2 border-gray-300 rounded-md p-auto font-mono text-lg ${isActive('/apis') ? 'font-bold text-black border-l-4 border-l-cyan-500' : null}`}
                 aria-current={isActive('/apis') ? 'page' : undefined}
               >
                 APIs

@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom";
+import MenuButton from "../components/MenuButton";
+import Titles from "../components/Titles";
 
 const Python = () => {
     return (
-        <div className="flex flex-col">
-            <h1 className="text-4xl font-bold p-4">Python</h1>
-            <div id="TextoPrincipal" className="flex flex-col md:flex-row justify-center gap-4 p-4">
-                <div className="bg-gray-800 p-6 rounded-lg flex flex-col gap-4 md:w-8/10 order-2 md:order-1">
+        <div className="flex flex-col p-8 gap-8">
+            <Titles title="Python" text={
+                'En este apartado encontrarás información sobre el lenguaje de programación Python. Desde información general hasta temas avanzados, los cuales podrás encontrar haciendo click en el menú <em>"Unidades del curso"</em>.'}/>
+            <div id="TextoPrincipal" className="flex flex-col md:flex-row justify-center gap-4">
+                <div className="rounded-lg flex flex-col gap-4 md:w-8/10">
                     <h2 className="text-center text-bold text-xl">¿Qué es Python?</h2>
                     <p className="text-white text-justify">Python es un lenguaje de programación interpretado de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. Su sintaxis clara y su enfoque en la legibilidad del código lo hacen ideal para principiantes y expertos en programación.</p>
                     <p className="text-white text-justify">Aquí podrás encontrar distintos niveles de aprendizaje para Python. <em className="font-bold">¡Espero que te sean de ayuda!</em></p>
                     <div id="historia" className="flex flex-col gap-4">
-                        <p className="text-white text-justify"><strong className="font-bold text-xl bg-green-900 p-2 rounded-md">Historia de Python:</strong><br/>
-                        <br/>
+                        <h3 className="font-bold text-xl bg-green-900 p-2 rounded-md">Historia de Python:</h3>
+                        <p className="text-white text-justify">
                         Este lenguaje es uno de los más populares y versátiles del mundo. Creado por Guido van Rossum en 1989.
                         <br/><br/>
                         Aunque es considerado muchas veces como un lenguaje "scripting", en realidad es un lenguaje de propósito general. Actualmente
@@ -27,10 +29,10 @@ const Python = () => {
                         </p>
                     </div>
                     <div id="usos" className="flex flex-col gap-4">
-                        <p className="text-white text-justify"><strong className="font-bold text-xl bg-green-900 p-2 rounded-md">Usos de Python:</strong><br/>
-                        <br/>
+                        <h3 className="font-bold text-xl bg-green-900 p-2 rounded-md">Usos de Python:</h3>
+                        <p className="text-white text-justify">
                         Algunos de los usos más comunes de Python incluyen:
-                        <ul className="list-disc pl-8 space-y-1">
+                        <ul className="list-disc pl-8 pt-2 space-y-2">
                             <li>Desarrollo web</li>
                             <li>Inteligencia Artificial</li>
                             <li>Ciencia de datos</li>
@@ -44,12 +46,11 @@ const Python = () => {
                         </p>
                     </div>
                 </div>
-                <div id="TablaDeContenido" className="flex flex-col gap-4 p-4 rounded-lg shadow-lg bg-white md:w-2/10 order-1 md:order-2">
-                    <h2 className="text-center text-bold text-xl bg-blue-600 p-2 rounded-md">Aprendizaje Progresivo</h2>
-                    <div className="flex flex-col gap-4">
-                            <Link to="fundamentos" className="bg-black text-white px-4 py-2 rounded-md inline-block whitespace-nowrap">1. Fundamentos</Link>
-                    </div>
-                </div>
+                <MenuButton 
+                    menuText="Unidades del curso" links={[
+                        {path:"fundamentos", text:"Fundamentos"},
+                ]}
+                />
             </div>
         </div>
     )

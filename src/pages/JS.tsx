@@ -32,7 +32,7 @@ const Card = ({title, children, preview}: CardProps) => {
     return (
         <div className="border-2 border-white rounded-xl p-4 mt-2 text-white bg-gray-800">
             <h3 className="text-lg font-semibold mb-2">{title}</h3>
-            {children}
+            <p>{children}</p>
             <div className="mt-4 rounded-lg overflow-hidden">
                 <div className="bg-gray-600 p-2 flex justify-between items-center">
                     <span className="text-sm text-white">Código:</span>

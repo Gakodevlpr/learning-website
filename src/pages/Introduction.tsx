@@ -18,23 +18,33 @@ const Introduction = () => {
             case 'programming':
                 return (
                     <div className="flex flex-col items-start gap-2 mt-4 p-6 bg-gray-800 rounded-xl animation-card text-lg">
-                        <p>La programación es el proceso de crear programas o aplicaciones que realizan tareas específicas en una computadora.</p>
-                        <br />
-                        <p>Se trata de una habilidad fundamental en la actualidad, ya que es la base de la mayoría de las aplicaciones y programas que utilizamos en nuestros dispositivos.</p>
-                        <br />
-                        <p>Pero la programación es mucho más que eso: es una forma de pensar, de resolver problemas y de crear soluciones. Es como aprender un nuevo idioma que te permite comunicarte con las computadoras y darles instrucciones para que hagan lo que tú quieras.</p>
-                        <br />
-                        <p>Lo mejor de todo es que cualquiera puede aprender a programar. No necesitas ser un genio matemático o tener un título en informática. Solo necesitas curiosidad, ganas de aprender y un poco de paciencia.</p>
-                        <br />
-                        <p>En esta sección, descubrirás los conceptos básicos de la programación, desde qué son los lenguajes de programación hasta cómo funcionan los algoritmos y los programas. Cada concepto está explicado de manera sencilla y con ejemplos prácticos.</p>
-                        <br />
-                        <p>¡No esperes más! Haz click en las siguientes tarjetas para comenzar tu viaje en el mundo de la programación. Cada tarjeta te llevará a un nuevo concepto que te ayudará a entender mejor este fascinante mundo.</p>
+                        <p>La programación es el proceso de crear programas o aplicaciones que realizan tareas específicas en una computadora.
+                        <br /><br />
+                        Se trata de una habilidad fundamental en la actualidad, ya que es la base de la mayoría de las aplicaciones y programas que utilizamos en nuestros dispositivos.
+                        <br /><br />
+                        Pero la programación es mucho más que eso: es una forma de pensar, de resolver problemas y de crear soluciones. Es como aprender un nuevo idioma que te permite comunicarte con las computadoras y darles instrucciones para que hagan lo que tú quieras.
+                        <br /><br />
+                        Lo mejor de todo es que cualquiera puede aprender a programar. No necesitas ser un genio matemático o tener un título en informática. Solo necesitas curiosidad, ganas de aprender y un poco de paciencia.
+                        <br /><br />
+                        En esta sección, descubrirás los conceptos básicos de la programación, desde qué son los lenguajes de programación hasta cómo funcionan los algoritmos y los programas. Cada concepto está explicado de manera sencilla y con ejemplos prácticos.
+                        <br /><br />
+                        ¡No esperes más! Haz click en las siguientes tarjetas para comenzar tu viaje en el mundo de la programación. Cada tarjeta te llevará a un nuevo concepto que te ayudará a entender mejor este fascinante mundo.</p>
                     </div>
                 );
             case 'purpose':
                 return (
                     <div className="flex-1 flex-col items-start gap-2 mt-4 p-6 bg-gray-800 rounded-xl animation-card">
-                        <p>La programación es útil para crear aplicaciones y programas que realizan tareas específicas en una computadora.</p>
+                        <p className='text-justify'>Programar es decirle a una máquina (normalmente un ordenador o un móvil) lo que quieres que haga, paso a paso, usando un lenguaje que pueda entender. Es como escribir instrucciones muy detalladas, pero en un idioma especial (como Python, JavaScript, C++, etc.).
+                            <br /><br />
+                            Imagínate que tienes una calculadora. Le das dos números y te devuelve la suma. Alguien tuvo que programar esa calculadora para que sepa qué hacer cuando aprietas los botones. Lo mismo pasa con cualquier aplicación que usas: Instagram, WhatsApp, YouTube, TikTok… todo eso funciona gracias a la programación.
+                            <br /><br />
+                            Pero programar no es solo para hacer apps o videojuegos (aunque eso ya es bastante guay). También sirve para:
+                            <ul className= "list-disc ml-8 mt-4 space-y-4 justify-items-start">                                <li>Automatizar tareas aburridas o repetitivas. Por ejemplo, si tienes que copiar 1000 nombres de un archivo a otro, puedes hacer un programa que lo haga en segundos.</li>
+                                <li>Crear herramientas útiles. ¿Quieres un programa que te avise cuándo hay descuentos en una tienda? ¿Uno que te diga qué estudiar según lo que más te cuesta? Puedes hacerlo.</li>
+                                <li>Resolver problemas. Por ejemplo, Google Maps calcula la ruta más rápida gracias a algoritmos (que son como recetas de pasos lógicos). Sin programación, eso no sería posible.</li>
+                                <li>Entender cómo funciona el mundo digital. En vez de ser solo un usuario que consume cosas, puedes ser alguien que crea. Es como pasar de ver películas a saber hacerlas.</li>
+                            </ul>
+                        </p>
                     </div>
                 );
             case 'languages':
@@ -154,9 +164,6 @@ const Introduction = () => {
                             <h3 className="text-lg font-bold">¿Son lo mismo los algoritmos y los programas?</h3>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-4">
-                        <p className="text-end">En este menú podrás encontrar distintas secciones más detalladas sobre programación.</p>
-                    </div>
                 </div>
             ) : (
                 // Layout cuando hay una tarjeta activa
@@ -213,12 +220,14 @@ const Introduction = () => {
                     </div>
                 </div>
             )}
-            <div className='flex justify-end fixed bottom-16 right-6 z-50'>
-                <button className="bg-black text-white p-2 rounded-md" onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={icono_pruebas} alt="icono_pruebas" className='w-6 h-6'/></button>
+            <div className='flex fixed bottom-16 right-6 z-50'>
+                <button className="bg-black text-white p-2 rounded-md" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    Ver más... <i className="bx bx-chevrons-down"></i>
+                </button>
             </div>
             {isMenuOpen && (
-                <div className="fixed bottom-28 right-8 bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col gap-2">
-                    <Link to="/python" className="bg-black text-white p-2 rounded-md">Python</Link>
+                <div className="fixed bottom-28 right-8 flex flex-col gap-2">
+                    <Link to="variables" className="bg-gray-600 text-white p-2 rounded-md shadow-xl">Variables</Link>
                 </div>
             )}
         </div>

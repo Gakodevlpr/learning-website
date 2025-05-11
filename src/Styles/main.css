@@ -15,6 +15,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Estilos para el tema oscuro normal */
+.dark {
+  color-scheme: dark;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark body {
+  background-color: #121212;
+}
+
+.dark #header {
+  background-color: #0a4d3d !important;
+}
+
+.dark button {
+  background-color: #333333;
+}
+
+/* Estilos para el tema de alto contraste */
+.dark-high-contrast {
+  color-scheme: dark;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-high-contrast body {
+  background-color: #000000;
+}
+
+.dark-high-contrast p {
+  color: #5bd0ff;
+}
+
+.dark-high-contrast #header {
+  background-color: #000000 !important;
+  border-color: #00b7ff !important;
+}
+
+.dark-high-contrast button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.dark-high-contrast a {
+  color: #ffffff;
+}
+
+.dark-high-contrast input,
+.dark-high-contrast textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.dark-high-contrast .border {
+  border-color: #ffffff !important;
+}
+
+.dark-high-contrast .text-gray-400 {
+  color: #ffffff !important;
+}
+
 button {
   background-color: rgb(0, 0, 0);
   color: #fff;

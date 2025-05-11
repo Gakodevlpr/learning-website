@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Layout from '../Layout';
+import Layout from '../components/Layout.tsx';
 import Home from '../pages/Home';
 import Introduction from '../pages/Introduction';
 import JS from '../pages/JS';
@@ -7,6 +7,7 @@ import Python from '../pages/Python';
 import Fundamentos from '../Cursos/Python/Fundamentos/fundamentos_0';
 import { Outlet } from 'react-router-dom';
 import APIs from '../pages/APIs';
+import Variables from '../Cursos/Introduccion/Variables/Variables.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -19,7 +20,17 @@ export const router = createBrowserRouter([
       },
       {
         path: 'introduction',
-        element: <Introduction />,
+        element: <Outlet />,
+        children:[
+          {
+            index: true,
+            element: <Introduction />,
+          },
+          {
+            path: 'variables',
+            element: <Variables />,
+          }
+        ]
       },
       {
         path: 'js',
