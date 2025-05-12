@@ -7,27 +7,33 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0086bb88;
+  color: rgb(0, 0, 0);
+  background-color: #afafaf;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+#header {
+  background-color: #7a7a7a!important;
+  color: #ffffff;
+}
+
+
 /* Estilos para el tema oscuro normal */
 .dark {
   color-scheme: dark;
-  background-color: #121212;
+  background-color: #000000;
   color: #ffffff;
 }
 
 .dark body {
-  background-color: #121212;
+  background-color: #000000;
 }
 
 .dark #header {
-  background-color: #0a4d3d !important;
+  background-color: #003347 !important;
 }
 
 .dark button {
@@ -46,7 +52,11 @@
 }
 
 .dark-high-contrast p {
-  color: #5bd0ff;
+  color: #ffffff;
+}
+
+.dark-high-contrast #Title{
+  color: #00b7ff;
 }
 
 .dark-high-contrast #header {
@@ -78,6 +88,7 @@
 .dark-high-contrast .text-gray-400 {
   color: #ffffff !important;
 }
+
 
 button {
   background-color: rgb(0, 0, 0);
@@ -116,4 +127,3 @@ button {
 .animation-card {
   animation: fadeInY 0.3s ease-out forwards;
 }
-

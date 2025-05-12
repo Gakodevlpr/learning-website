@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Titles from '../components/Titles';
 
 const Introduction = () => {
     const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -107,15 +108,7 @@ const Introduction = () => {
 
     return (
         <div className="flex flex-col gap-4 p-4">
-            <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
-                <h2 className="text-center font-bold text-2xl p-4">Introducción a la programación</h2>
-                <div className="hidden md:block self-stretch border-r border-gray-300"></div>
-                <div className="block md:hidden w-full border-b border-gray-300"></div>
-                <div className="flex flex-col gap-2">
-                    <p className="flex flex-col px-8 text-justify">Donde aprenderemos los conceptos básicos sobre programación. Siéntete libre de navegar por las tarjetas y aprender más sobre programación.</p>
-                    <p className="flex flex-col px-8 text-justify"><em>¡Espero que te sean de ayuda!</em></p>
-                </div>
-            </div>
+            <Titles title='Introducción a la programación' text='Donde aprenderemos los conceptos básicos sobre programación. Siéntete libre de navegar por las tarjetas y aprender más sobre programación.' />
             {activeCard === null ? (
                 // Layout cuando no hay una tarjeta activa
                 <div className="flex flex-col gap-4 pt-4">
