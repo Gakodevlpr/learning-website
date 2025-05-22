@@ -3,8 +3,8 @@ import 'boxicons/css/boxicons.min.css';
 const Variables = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold py-2 border-b-2 border-white">Variables en Programación</h1>
-            <div id='content_variables' className="flex flex-col gap-[22px] text-white text-justify">
+            <h1 className="text-4xl font-bold p-4 border-b-2 border-white">Variables en Programación</h1>
+            <div id='content_variables' className="flex flex-col gap-[22px] p-4 text-white text-justify">
                 <h2 className="text-xl font-bold pt-6">
                     <span className='border-s-[3px] px-2'>
                         Las variables son uno de los conceptos más fundamentales en programación

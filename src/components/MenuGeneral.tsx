@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const MenuGeneral = () => {
-    const transitionSpecial = "text-lg p-[4px] border-white backdrop-blur-2xl transition-all duration-700 hover:text-black hover:hover:bg-white hover hover:cursor-pointer animation-navbar border-2 rounded-xl"
+    const transitionSpecial = "text-lg p-[4px] border-white backdrop-blur-2xl transition-all duration-700 hover:text-black hover:font-bold hover:bg-white hover hover:cursor-pointer animation-navbar border-2 rounded-xl"
 
     const [navbar, setNavbar] = useState(false)
     const [isClosing, setIsClosing] = useState(false)
@@ -49,7 +49,7 @@ const MenuGeneral = () => {
               to="/" 
               id='linkNav'
               onClick={closeNavbar}
-              className={`${transitionSpecial} ${isActive('/') ? 'border-l-8 border-l-cyan-500' : null}`}
+              className={`${transitionSpecial} ${isActive('/') ? 'font-bold border-l-8 border-l-cyan-500' : null}`}
               aria-current={isActive('/') ? 'page' : undefined}
             >
               Inicio
@@ -58,7 +58,7 @@ const MenuGeneral = () => {
               to="/introduction" 
               id='linkNav'
               onClick={closeNavbar}
-              className={`${transitionSpecial} ${isActive('/introduction') ? 'border-l-8 border-l-cyan-500' : null}`}
+              className={`${transitionSpecial} ${isActive('/introduction') ? 'font-bold border-l-8 border-l-cyan-500' : null}`}
               aria-current={isActive('/introduction') ? 'page' : undefined}
             >
               Introducción
@@ -67,35 +67,17 @@ const MenuGeneral = () => {
               to="/python"
               id='linkNav'
               onClick={closeNavbar}
-              className={`${transitionSpecial} ${isActive('/python') ? 'border-l-8 border-l-cyan-500' : null}`}
+              className={`${transitionSpecial} ${isActive('/python') ? 'font-bold border-l-8 border-l-cyan-500' : null}`}
               aria-current={isActive('/python') ? 'page' : undefined}
             >
               Python
-            </Link>
-            <Link 
-              to="/js" 
-              id='linkNav'
-              onClick={closeNavbar}
-              className={`${transitionSpecial} ${isActive('/js') ? 'border-l-8 border-l-cyan-500' : null}`}
-              aria-current={isActive('/js') ? 'page' : undefined}
-            >
-              JavaScript
-            </Link>
-            <Link
-              to="/apis"
-              id='linkNav'
-              onClick={closeNavbar}
-              className={`${transitionSpecial} ${isActive('/apis') ? 'border-l-8 border-l-cyan-500' : null}`}
-              aria-current={isActive('/apis') ? 'page' : undefined}
-            >
-              APIs
             </Link>
           </nav>
         )}
         <div className="flex flex-col">
           <button 
             onClick={toggleNavbar} 
-            className="bg-white/10 backdrop-blur-sm p-5 rounded-md relative h-[30px] w-[30px] flex flex-col justify-center items-center"
+            className="bg-white/10 backdrop-blur-sm p-2 rounded-md relative h-[30px] w-[30px] flex flex-col justify-center items-center"
             aria-label="Toggle navigation menu"
             aria-expanded={navbar}
           >

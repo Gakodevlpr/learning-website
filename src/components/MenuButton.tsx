@@ -12,7 +12,7 @@ const MenuButton = ({menuText, links}:{menuText:string, links: LinkItem[]}) => {
 
     return (
         <div>
-            <div className='flex fixed bottom-16 right-6 z-50'>
+            <div className='flex fixed bottom-16 right-6 z-50 opacity-50 hover:opacity-100'>
                 <button className="bg-black text-white p-2 rounded-md" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     {menuText} <i className="bx bx-chevrons-down"></i>
                 </button>

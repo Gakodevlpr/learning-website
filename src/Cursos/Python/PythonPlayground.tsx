@@ -42,53 +42,53 @@ const PythonPlayground: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-fit mx-auto space-y-4">
-      <div className="flex flex-row gap-2">
-        <Editor
-          className="border-2 relative"
-          height="300px"
-          defaultLanguage="python"
-          value={code}
-          onChange={(value) => setCode(value || "")}
-          theme="vs-dark"
-          options={{
-            fontSize: 14,
-            fontFamily: "Fira Code, monospace",
-            minimap: { enabled: false },
-            lineNumbers: "on",
-            wordWrap: "on",
-            scrollBeyondLastLine: false,
-            tabSize: 4,
-            automaticLayout: true,
-          }}
-        />
-        <div className="flex flex-wrap">
-          {/* Botón de ejecución */}
+    <div className="flex flex-col w-full min-h-screen gap-6 p-4">
+      <h2 className="font-bold text-xl bg-gray-600 p-2 rounded-md">Playground de Python</h2>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="md:col-span-4 h-[300px] border-2 rounded-lg overflow-hidden">
+          <Editor
+            height="100%"
+            defaultLanguage="python"
+            value={code}
+            onChange={(value) => setCode(value || "")}
+            theme="vs-dark"
+            options={{
+              fontSize: 14,
+              fontFamily: "Fira Code, monospace",
+              minimap: { enabled: false },
+              lineNumbers: "on",
+              wordWrap: "on",
+              scrollBeyondLastLine: false,
+              tabSize: 4,
+              automaticLayout: true,
+            }}
+          />
+        </div>
+        
+        <div className="flex flex-row md:flex-col gap-4 justify-center items-stretch">
           <button
             onClick={runCode}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 border-2"
+            className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 border-2 transition-colors whitespace-nowrap"
           >
             Ejecutar código
           </button>
-          {/* Botón de copiar */}
+          
           <CopyToClipboard text={code} onCopy={handleCopy}>
-            <button className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 border-2">
+            <button className="flex-1 bg-gray-500 text-white px-4 py-3 rounded-lg hover:bg-gray-600 border-2 transition-colors whitespace-nowrap">
               Copiar código
             </button>
           </CopyToClipboard>
         </div>
       </div>
 
-      {/* Mensaje de copiado */}
       {copied && (
-        <div className="bg-green-600 text-white p-2 rounded-md mt-2">
+        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           Código copiado
         </div>
       )}
 
-      {/* Terminal de salida */}
-      <div className="flex flex-col gap-4 bg-black border-2 text-green-400 font-mono p-4 rounded-xl min-h-[100px] whitespace-pre-wrap">
-        <p className="border-b-2 border-gray-800">Salida: </p>
+      <div className="bg-black border-2 text-green-400 font-mono p-6 rounded-xl min-h-[120px] whitespace-pre-wrap">
+        <p className="border-b-2 border-gray-800 pb-2 mb-4">Salida:</p>
         {output}
       </div>
     </div>

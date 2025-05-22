@@ -1,5 +1,4 @@
 import MenuButton from "../components/MenuButton";
-import PythonPlayground from "../components/PythonPlayground";
 import Titles from "../components/Titles";
 
 const Python = () => {
@@ -13,13 +12,13 @@ const Python = () => {
                     <p className="text-justify">Python es un lenguaje de programación interpretado de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. Su sintaxis clara y su enfoque en la legibilidad del código lo hacen ideal para principiantes y expertos en programación.</p>
                     <p className="text-justify">Aquí podrás encontrar distintos niveles de aprendizaje para Python. <em className="font-bold">¡Espero que te sean de ayuda!</em></p>
                     <div id="historia" className="flex flex-col gap-4">
-                        <h3 className="font-bold text-xl bg-green-900 p-2 rounded-md">Historia:</h3>
+                        <h3 className="font-bold text-xl bg-green-700 p-2 rounded-md">Historia:</h3>
                         <p className="text-justify">
                         Este lenguaje es uno de los más populares y versátiles del mundo. Creado por Guido van Rossum en 1989.
                         <br/><br/>
                         Aunque es considerado muchas veces como un lenguaje "scripting", en realidad es un lenguaje de propósito general. Actualmente
                         es usado en muchas áreas como: <em className="font-bold">Desarrollo web, Inteligencia Artificial, Ciencia de datos, etc.</em> 
-                        Incluso en grandes servidores web que proveen servicio ininterrumpido los 365 días del año.
+                        &nbsp;Incluso en grandes servidores web que proveen servicio ininterrumpido los 365 días del año.
                         <br/><br/>
                         Guido van Rossum es un programador holandés que trabajaba en el CWI (Centrum Wiskunde & Informatica) cuando comenzó a desarrollar Python.
                         A finales de la década de los 80 (1989), Guido Van Rossum decidió crear un nuevo lenguaje de programación por necesidad personal,
@@ -30,7 +29,7 @@ const Python = () => {
                         </p>
                     </div>
                     <div id="usos" className="flex flex-col gap-4">
-                        <h3 className="font-bold text-xl bg-green-900 p-2 rounded-md">Usos:</h3>
+                        <h3 className="font-bold text-xl bg-green-700 p-2 rounded-md">Usos:</h3>
                         <p className="text-justify">
                         Algunos de los usos más comunes de Python incluyen:
                         <ul className="list-disc pl-8 pt-2 space-y-2">
@@ -47,15 +46,12 @@ const Python = () => {
                         </p>
                     </div>
                 </div>
-                <h2 className="font-bold text-xl bg-gray-600 p-2 rounded-md">Playground de Python</h2>
-                <div>
-                    <PythonPlayground/>
-                    <MenuButton 
+                <MenuButton 
                         menuText="Unidades del curso" links={[
+                            {path:"PythonPlayground", text:"Playground"},
                             {path:"fundamentos", text:"Fundamentos"},
                     ]}
                     />
-                </div>
             </div>
         </div>
     )

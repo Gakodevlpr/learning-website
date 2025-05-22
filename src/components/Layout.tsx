@@ -28,8 +28,9 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="content flex-1 p-4">
         {children}
       </main>
-      <footer className="footer flex justify-center items-center border-2 border-gray-300 p-auto font-mono">
+      <footer className="footer flex justify-center items-center border-2 border-gray-300 p-auto font-mono gap-8">
         <p>© 2025 Gakodvlpr</p>
+        <Link to='/about' className="text-white hover:text-gray-500">About</Link>
       </footer>
       <CookieConsent />
     </div> 
