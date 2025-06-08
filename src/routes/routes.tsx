@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../components/Layout.tsx';
-import Home from '../pages/Home';
+import Home from '../pages/Home/Home.tsx';
 import Introduction from '../pages/Introduction';
 import Python from '../pages/Python';
 import Fundamentos from '../Cursos/Python/Fundamentos/fundamentos_0';

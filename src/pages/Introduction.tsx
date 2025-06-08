@@ -107,7 +107,7 @@ const Introduction = () => {
     };
 
     return (
-        <div className="flex flex-col gap-4 p-4">
+        <div className="flex flex-col p-8">
             <Titles title='Introducción a la programación' text='Donde aprenderemos los conceptos básicos sobre programación. Siéntete libre de navegar por las tarjetas y aprender más sobre programación.' />
             {activeCard === null ? (
                 // Layout cuando no hay una tarjeta activa

@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/components/.ProgressTracker.tsx", "obsoleto/páginas/APIs.tsx", "obsoleto/páginas/JS.tsx", "no usado/componentes/SearchBar.tsx", "no usado/componentes/Comments.tsx"]
+  "include": ["src", "src/components/.ProgressTracker.tsx", "obsoleto/páginas/APIs.tsx", "obsoleto/páginas/JS.tsx", "no usado/componentes/SearchBar.tsx", "no usado/componentes/Comments.tsx", "no usado/componentes/UserPreferences.tsx"]
 }

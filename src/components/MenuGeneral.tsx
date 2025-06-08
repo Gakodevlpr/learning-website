@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const MenuGeneral = () => {
-    const transitionSpecial = "text-lg p-[4px] border-white backdrop-blur-2xl transition-all duration-700 hover:text-black hover:font-bold hover:bg-white hover hover:cursor-pointer animation-navbar border-2 rounded-xl"
+    const transitionSpecial = "text-lg p-[4px] border-white backdrop-blur-2xl transition-all duration-700 hover:text-black hover:bg-white hover hover:cursor-pointer animation-navbar border-2 rounded-xl"
 
     const [navbar, setNavbar] = useState(false)
     const [isClosing, setIsClosing] = useState(false)

@@ -9,12 +9,10 @@ const ThemeToggle = () => {
   
   useEffect(() => {
     // Eliminar todas las clases de tema primero
-    document.documentElement.classList.remove('dark', 'dark-high-contrast');
+    document.documentElement.classList.remove('dark', 'dark-high-contrast', 'light');
     
     // Aplicar la clase correspondiente al tema actual
-    if (theme !== 'light') {
-      document.documentElement.classList.add(theme);
-    }
+    document.documentElement.classList.add(theme);
     
     // Guardar el tema en localStorage
     localStorage.setItem('theme', theme);
