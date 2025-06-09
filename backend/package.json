@@ -1,0 +1,19 @@
+{
+  "name": "learning-website-backend",
+  "version": "1.0.0",
+  "description": "Backend for the learning website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "info": "echo Scripts disponibles: && echo npm start: Inicia el servidor en modo producción && echo   - Usa node directamente sin recarga automática && echo   - Ideal para entornos de producción && echo   - No muestra logs detallados && echo   - Mejor rendimiento que modo desarrollo && echo npm run dev: Inicia el servidor en modo desarrollo con recarga automática && echo   - Usa nodemon para recargar al detectar cambios && echo   - Muestra logs detallados && echo   - Ideal para desarrollo local && echo npm run info: Muestra esta información && echo ......... && echo El servidor maneja los favoritos usando un archivo JSON en backend/data/favorites.json && echo Puerto por defecto: 3001 && echo Endpoints disponibles: && echo   GET    /api/favorites     - Obtener todos los favoritos && echo   POST   /api/favorites     - Añadir un favorito && echo   DELETE /api/favorites/:id - Eliminar un favorito"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

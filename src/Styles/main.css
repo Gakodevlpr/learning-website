@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #f4f4f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #00b7ff;
+}
+
+#about{
+  color: #000000;
+}
+
+#header {
+  background-color: #00abee !important;
+  color: #ffffff;
+}
+
+#header a {
+  color: #000000;
+}
+
+#lenguages span{
+  color: #ffffff;
+  background: rgba(77, 76, 76);
+}
+
+/* 🌘 Estilos para el tema oscuro normal */
+.dark {
+  color-scheme: dark;
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+.dark body {
+  background-color: #131c30;
+}
+
+.dark #header {
+  background-color: #1f314e !important;
+  color: #ffffff;
+}
+
+.dark #header a {
+  color: #ffffff;
+}
+
+.dark #about {
+  color: #ffffff;
+}
+
+.dark button {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* 🌑 Estilos para el tema de alto contraste */
+.dark-high-contrast {
+  color-scheme: dark;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-high-contrast body {
+  background-color: #000000;
+}
+
+.dark-high-contrast p,
+.dark-high-contrast a,
+.dark-high-contrast .text-gray-400
+.dark-high-contrast #about {
+  color: #ffffff !important;
+}
+
+.dark-high-contrast #Title {
+  color: #00b7ff;
+}
+
+.dark-high-contrast #header {
+  background-color: #000000 !important;
+  border-bottom: 2px solid #00b7ff !important;
+}
+
+.dark-high-contrast button {
+  background-color: #161616;
+  color: #ffffff;
+  border: 2px solid #0088cc;
+}
+
+.dark-high-contrast input,
+.dark-high-contrast textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #0088cc;
+}
+
+.dark-high-contrast .border {
+  border-color: #0088cc !important;
+}
+
+
+
+button {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeInX {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInY {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation-navbar {
+  animation: fadeInX 0.3s ease-out forwards;
+}
+
+.animation-card {
+  animation: fadeInY 0.3s ease-out forwards;
+}
