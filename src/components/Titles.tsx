@@ -1,6 +1,6 @@
 const Titles = ({title, text}:{title:string, text:string}) => {
     return (
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col md:flex-row justify-start items-center gap-4">
             <h2 id='Title' className="text-center font-bold text-2xl">{title}</h2>
             <span className="hidden md:block h-16 border-r border-gray-300"></span>
             <span className="block md:hidden w-full border-b border-gray-300"></span>
