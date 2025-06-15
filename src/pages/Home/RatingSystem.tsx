@@ -14,9 +14,9 @@ interface RatingResponse {
 }
 
 // URL condicional basada en el entorno
-const API_URL = import.meta.env.PROD 
-    ? 'https://gakodevlpr.onrender.com'  // URL de producción
-    : 'http://localhost:3001';           // URL de desarrollo
+const API_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3001'           // URL de desarrollo
+    : 'https://gakodevlpr.onrender.com'; // URL de producción
 
 const RatingSystem = () => {
     const [rating, setRating] = useState<number>(0);
