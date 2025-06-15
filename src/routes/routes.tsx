@@ -8,6 +8,7 @@ import { Outlet } from 'react-router-dom';
 import Variables from '../Cursos/Introduccion/Variables/Variables.tsx';
 import About from '../pages/About.tsx';
 import PythonPlayground from '../Cursos/Python/PythonPlayground.tsx';
+import Fundamentos_1 from '../Cursos/Python/Fundamentos/fundamentos_1.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             path: 'fundamentos',
             element: <Fundamentos />,
           },
+          {
+            path: 'fundamentos_1',
+            element: <Fundamentos_1 />,
+          }
         ],
       },
       {

@@ -1,5 +1,7 @@
 import pythonLogo from '../img/python-logo-generic.svg'
 import vscodeicon from '../../../images/icons/visual-studio-code-icons/vscode.svg'
+import { Link } from 'react-router-dom';
+import MenuPaths from '../MenuPaths';
 
 const Fundamentos_0 = () => {
     return (
@@ -67,6 +69,12 @@ const Fundamentos_0 = () => {
                 </p>
                 <p id=''>
                 </p>
+            </div>
+            <div className="flex justify-end gap-4">
+                <MenuPaths/>
+                <Link to="/fundamentos_1" className="bg-blue-500 text-white rounded-md p-3">
+                    Siguiente
+                </Link>
             </div>
         </div>
     )

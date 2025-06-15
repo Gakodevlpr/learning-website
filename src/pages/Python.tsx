@@ -1,4 +1,4 @@
-import MenuButton from "../components/MenuButton";
+import MenuPaths from "../Cursos/Python/MenuPaths";
 import Titles from "../components/Titles";
 
 const Python = () => {
@@ -46,12 +46,7 @@ const Python = () => {
                         </p>
                     </div>
                 </div>
-                <MenuButton 
-                        menuText="Unidades del curso" links={[
-                            {path:"PythonPlayground", text:"Playground"},
-                            {path:"fundamentos", text:"Fundamentos"},
-                    ]}
-                    />
+                <MenuPaths />
             </div>
         </div>
     )
