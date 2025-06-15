@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import tiktok from '../../../images/icons/tiktok.svg';
 import Titles from '../../../components/Titles';
 
 const Fundamentos = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <div className="flex flex-col p-8 gap-8">
